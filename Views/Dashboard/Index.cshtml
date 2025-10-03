@@ -1,0 +1,139 @@
+@model DisasterAlleviationFoundation.Models.DashboardViewModel
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<div class="container-fluid py-4">
+    <style>
+        .cta-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            border: 1px solid rgba(0,0,0,.06);
+            border-radius: 16px;
+            box-shadow: 0 10px 20px rgba(0,0,0,.06);
+            padding: 24px;
+            height: 100%;
+            transition: all .25s ease;
+        }
+        .cta-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 30px rgba(0,0,0,.10);
+        }
+        .cta-icon {
+            width: 56px; height: 56px;
+            display: inline-flex; align-items: center; justify-content: center;
+            border-radius: 50%;
+            background: #eef6ff; color: #0d6efd;
+            box-shadow: inset 0 0 0 6px #ffffff;
+            margin-bottom: 12px;
+            font-size: 22px;
+        }
+        .cta-title { font-weight: 700; letter-spacing: .2px; }
+        .cta-text { color: #6b7280; }
+        .cta-actions .btn { border-radius: 10px; padding: 10px 14px; }
+    </style>
+
+    <div class="row g-4 mb-4">
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="cta-card text-start h-100">
+                <div class="cta-icon">
+                    <i class="fas fa-hands-helping"></i>
+                </div>
+                <h5 class="cta-title mb-2">Volunteer</h5>
+                <p class="cta-text mb-3">Join our volunteer network and make a direct impact in disaster-affected communities.</p>
+                <div class="cta-actions">
+                    <form asp-action="Volunteer" method="post">
+                        <button type="submit" class="btn btn-success">
+                            <i class="fas fa-hand-holding-heart me-2"></i>
+                            Become a Volunteer
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="cta-card text-start h-100">
+                <div class="cta-icon" style="background:#f1f5ff;color:#0d6efd;">
+                    <i class="fas fa-donate"></i>
+                </div>
+                <h5 class="cta-title mb-2">Donate</h5>
+                <p class="cta-text mb-3">Your support provides food, clothing, and medical supplies to affected areas.</p>
+                <div class="cta-actions">
+                    <a asp-controller="Donation" asp-action="Donate" class="btn btn-primary">
+                        <i class="fas fa-heart me-2"></i>
+                        Make a Donation
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="cta-card text-start h-100">
+                <div class="cta-icon" style="background:#fff3f3;color:#dc3545;">
+                    <i class="fas fa-exclamation-triangle"></i>
+                </div>
+                <h5 class="cta-title mb-2">Emergency Response</h5>
+                <p class="cta-text mb-3">Report emergencies and access real-time disaster response information and resources.</p>
+                <div class="cta-actions">
+                    <a asp-controller="Emergency" asp-action="Report" class="btn btn-danger">
+                        <i class="fas fa-phone me-2"></i>
+                        Report Emergency
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Recent Activity -->
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">
+                        <i class="fas fa-clock me-2"></i>
+                        Recent Activity
+                    </h5>
+                </div>
+                <div class="card-body">
+                    @if (Model.RecentActivities.Any())
+                    {
+                        @foreach (var activity in Model.RecentActivities)
+                        {
+                            <div class="activity-item @activity.Type">
+                                <div class="d-flex align-items-start">
+                                    <div class="me-3">
+                                        <span class="fs-5">@activity.Icon</span>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <h6 class="mb-1">@activity.Title</h6>
+                                        <p class="mb-1 text-muted">@activity.Description</p>
+                                        <small class="text-muted">
+                                            <i class="fas fa-clock me-1"></i>
+                                            @activity.Timestamp.ToString("MMM dd, yyyy 'at' h:mm tt")
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    }
+                    else
+                    {
+                        <div class="text-center py-4 text-muted">
+                            <i class="fas fa-info-circle fs-1 mb-3"></i>
+                            <p>No recent activity to display.</p>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        // Auto-hide alerts after 5 seconds
+        setTimeout(function() {
+            $('.alert').fadeOut('slow');
+        }, 5000);
+    </script>
+}

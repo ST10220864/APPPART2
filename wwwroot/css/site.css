@@ -1,0 +1,578 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+}
+
+/* Custom styles for the Disaster Alleviation Foundation */
+.hero-section {
+  background: linear-gradient(135deg, #2196F3 0%, #1976D2 100%);
+  color: white;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero-section p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+  background: linear-gradient(135deg, #2196F3 0%, #1976D2 100%);
+  color: white;
+  border-radius: 12px 12px 0 0 !important;
+  border: none;
+  padding: 1.5rem;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #2196F3 0%, #1976D2 100%);
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #1976D2 0%, #1565C0 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(33, 150, 243, 0.3);
+}
+
+.btn-success {
+  background: linear-gradient(135deg, #4CAF50 0%, #45A049 100%);
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-success:hover {
+  background: linear-gradient(135deg, #45A049 0%, #3D8B40 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(76, 175, 80, 0.3);
+}
+
+.btn-danger {
+  background: linear-gradient(135deg, #FF5722 0%, #E64A19 100%);
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-danger:hover {
+  background: linear-gradient(135deg, #E64A19 0%, #D84315 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(255, 87, 34, 0.3);
+}
+
+.form-control {
+  border-radius: 8px;
+  border: 2px solid #e0e0e0;
+  padding: 0.75rem 1rem;
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.form-control:focus {
+  border-color: #2196F3;
+  box-shadow: 0 0 0 0.2rem rgba(33, 150, 243, 0.25);
+}
+
+.form-label {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 2rem 0;
+}
+
+.auth-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  max-width: 500px;
+  width: 100%;
+}
+
+.auth-header {
+  background: linear-gradient(135deg, #2196F3 0%, #1976D2 100%);
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+.auth-header h2 {
+  margin: 0;
+  font-weight: 700;
+}
+
+.auth-header p {
+  margin: 0.5rem 0 0 0;
+  opacity: 0.9;
+}
+
+.auth-body {
+  padding: 2rem;
+}
+
+.stats-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.stats-card:hover {
+  transform: translateY(-2px);
+}
+
+.stats-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2196F3;
+  margin-bottom: 0.5rem;
+}
+
+.stats-label {
+  color: #666;
+  font-weight: 600;
+}
+
+.activity-item {
+  background: white;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  border-left: 4px solid #2196F3;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.activity-item.success {
+  border-left-color: #4CAF50;
+}
+
+.activity-item.warning {
+  border-left-color: #FF9800;
+}
+
+.activity-item.error {
+  border-left-color: #F44336;
+}
+
+.activity-item.info {
+  border-left-color: #2196F3;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+}
+
+.navbar-nav .nav-link {
+  font-weight: 500;
+  transition: color 0.2s ease-in-out;
+}
+
+.dropdown-item {
+  transition: background-color 0.2s ease-in-out;
+}
+
+.dropdown-item:hover {
+  background-color: #f8f9fa;
+}
+
+.alert {
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.text-muted {
+  color: #6c757d !important;
+}
+
+.dashboard-welcome {
+  background: linear-gradient(135deg, #2196F3 0%, #1976D2 100%);
+  color: white;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.action-card {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  height: 100%;
+}
+
+.action-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.action-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.action-card h5 {
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.action-card p {
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+  
+  .hero-section p {
+    font-size: 1rem;
+  }
+  
+  .auth-container {
+    padding: 1rem;
+  }
+  
+  .auth-body {
+    padding: 1.5rem;
+  }
+  
+  .stats-number {
+    font-size: 2rem;
+  }
+}
+
+/* Incident Reporting Styles */
+.incident-form {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 15px;
+  padding: 2rem;
+  margin: 1rem 0;
+}
+
+.incident-form .form-label {
+  font-weight: 600;
+  color: #495057;
+  margin-bottom: 0.5rem;
+}
+
+.incident-form .form-control,
+.incident-form .form-select {
+  border-radius: 8px;
+  border: 2px solid #e9ecef;
+  transition: all 0.3s ease;
+}
+
+.incident-form .form-control:focus,
+.incident-form .form-select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.incident-card {
+  transition: all 0.3s ease;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.incident-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.incident-priority-critical {
+  border-left: 5px solid #dc3545;
+}
+
+.incident-priority-high {
+  border-left: 5px solid #fd7e14;
+}
+
+.incident-priority-medium {
+  border-left: 5px solid #ffc107;
+}
+
+.incident-priority-low {
+  border-left: 5px solid #28a745;
+}
+
+.severity-badge {
+  font-size: 0.8rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+}
+
+.severity-minor {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.severity-moderate {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.severity-major {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.severity-severe {
+  background-color: #f5c6cb;
+  color: #721c24;
+}
+
+.severity-catastrophic {
+  background-color: #dc3545;
+  color: white;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 30px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 15px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #dee2e6;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: -35px;
+  top: 8px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0 0 0 3px #dee2e6;
+}
+
+.timeline-marker.bg-primary {
+  background-color: #007bff;
+  box-shadow: 0 0 0 3px #007bff;
+}
+
+.timeline-marker.bg-danger {
+  background-color: #dc3545;
+  box-shadow: 0 0 0 3px #dc3545;
+}
+
+.timeline-content {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  border-left: 4px solid #007bff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-header {
+  margin-bottom: 10px;
+}
+
+.timeline-meta {
+  font-size: 0.85em;
+  color: #6c757d;
+}
+
+.incident-stats-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 15px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.incident-stats-card .stats-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.incident-stats-card .stats-label {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.search-filters {
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.incident-table th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+  border-top: none;
+}
+
+.incident-table .table-danger {
+  background-color: rgba(220, 53, 69, 0.1);
+}
+
+.incident-table .table-warning {
+  background-color: rgba(255, 193, 7, 0.1);
+}
+
+.critical-incident-alert {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+  color: white;
+  border: none;
+  border-radius: 15px;
+  padding: 1.5rem;
+}
+
+.incident-action-buttons {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.incident-action-buttons .btn {
+  border-radius: 20px;
+  font-size: 0.85rem;
+  padding: 0.4rem 0.8rem;
+}
+
+/* Form validation styles */
+.was-validated .form-control:valid {
+  border-color: #28a745;
+}
+
+.was-validated .form-control:invalid {
+  border-color: #dc3545;
+}
+
+.invalid-feedback {
+  display: block;
+  font-size: 0.875rem;
+  color: #dc3545;
+  margin-top: 0.25rem;
+}
+
+/* Modal enhancements */
+.modal-content {
+  border-radius: 15px;
+  border: none;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.modal-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 15px 15px 0 0;
+}
+
+.modal-header .btn-close {
+  filter: invert(1);
+}
+
+/* Progress bars for statistics */
+.progress {
+  height: 25px;
+  border-radius: 15px;
+  background-color: #e9ecef;
+}
+
+.progress-bar {
+  border-radius: 15px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Responsive adjustments for incident forms */
+@media (max-width: 768px) {
+  .incident-form {
+    padding: 1rem;
+  }
+  
+  .incident-action-buttons {
+    justify-content: center;
+  }
+  
+  .timeline {
+    padding-left: 20px;
+  }
+  
+  .timeline::before {
+    left: 10px;
+  }
+  
+  .timeline-marker {
+    left: -25px;
+  }
+}
